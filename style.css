@@ -1,0 +1,192 @@
+:root{
+    --color-botones: #F3603B;
+    --color-titulos: #232C50;
+    --color-nav: #242E52;
+    --color-parrafos: #B3B2B7;
+    --color-footer: #1E1E26;
+    --color-p-footer: #FFFFFF;
+    --contenedor-opiniones: #FAFAFA;
+
+}
+
+*{
+   font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/*estilos para elementos generales*/
+h1, h2, h3{
+    color: var(--color-titulos);
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    color: var(--color-parrafos);
+    line-height: 30px;
+}
+
+button{
+    background-color: var(--color-botones);
+    border-radius: 20px;
+    height: 44px;
+    width: 134px;
+    border: none;
+    color: var(--color-p-footer);
+    font-weight: bold;
+}
+
+/*header*/
+/*fondo*/
+.contenedor1{
+    background-image: url(sources/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -60px;
+    background-position-x: 50px;
+}
+header{
+   padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul{
+    display: none;
+}
+
+.logo{
+  height: 20px;
+}
+
+.seccion1 img{
+   margin-top: 80px;
+   height: 160px;
+   width: 160px;
+}
+.bloque1{
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+
+.bloque1 img{
+    height: 140px;
+}
+.imagen1{
+    margin-right: 20px;
+}
+.imagen3{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 120px;
+}
+
+.seccion2 h1{
+   text-align: center;
+   font-size: 40px;
+   margin-top: 50px;
+   padding: 0 10px;
+}
+
+.seccion2{
+    background-image: url(sources/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-position-x: 245px;
+    background-position-y: -5px;
+}
+.seccion2 p{
+    margin: 0 30px 0 50px;
+    font-size: 18px;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.seccion3{
+    position: relative;
+    bottom: 70px;
+}
+
+.seccion3 h2{
+    font-size: 35px;
+    text-align: center;
+    margin-top: 80px;
+    padding: 0 20px;
+}
+
+.seccion3 p{
+    margin: 30px 40px 0 50px;
+    text-align: center;
+}
+
+.seccion-diferencias{
+    display: flex;
+    margin-top: 30px;
+}
+
+.seccion-diferencias h3{
+    font-size: 16px;
+    background-color: rgba(248,143,119, 0.2);
+    height: 35px;
+    width: 900px;
+    padding: 12px 0 0 20px;
+    position: relative;
+    right: 10px;
+}
+.seccion-diferencias button{
+    width: 170px;
+    height: 45px;
+    position: relative;
+    top: 16px;
+    margin: 0 0 0 15px; 
+}
+
+.diferencias p{
+    text-align: left;
+    margin: 10px 5px 0 15px;
+}
+
+/*opiniones*/
+.opiniones{
+    text-align: center;
+}
+
+.contenedor-opiniones{
+    background-color: var(--contenedor-opiniones);
+    position: relative;
+    bottom: 60px;
+    height: 250px;
+    margin: 0 20px;
+    padding-top: 100px;
+}
+.opiniones h2{
+    font-size: 38px;
+    margin-bottom: 60px;
+    font-weight: 700;
+    padding: 0 10px 20 10px;
+}
+
+.opiniones img{
+    height: 110px;
+    position: relative;
+    z-index: 100;
+}
+
+.opiniones h3{
+    font-size: 24px;
+}
+
+.opiniones p{
+    margin: 0 30px;
+}
+
