@@ -41,6 +41,11 @@ button{
     font-weight: bold;
 }
 
+button:hover{
+    background-color: rgba(243,96,59, 0.8);
+    box-shadow: 0 4px 2px 2.8px rgba(243,96,59, 0.25);
+}
+
 /*header*/
 /*fondo*/
 .contenedor1{
@@ -56,15 +61,21 @@ header{
     justify-content: space-around;
 }
 
-
+/*
+nav ul{
+    display: none;
+}
+*/
 nav ul{
     display: none;
 }
 
 .logo{
-  height: 20px;
+    height: 20px;
 }
 
+
+/*otras secciones*/
 .seccion1 img{
    margin-top: 80px;
    height: 160px;
@@ -87,7 +98,7 @@ nav ul{
     display: flex;
     align-items: center;
     position: relative;
-    left: 120px;
+    left: 100px;
 }
 
 .seccion2 h1{
@@ -194,6 +205,29 @@ nav ul{
     margin: 0 30px;
 }
 
+.persona{
+    display: none;
+}
+
+.puntos-slider{
+    display: flex;
+    justify-content: center;
+}
+.slider{
+    background-color: var(--color-botones);
+    height: 10px;
+    width: 10px;
+    border-radius: 100px;
+    margin-left: 30px;
+    border: var(--color-parrafos) solid 2px;
+}
+/*#slider{
+    background-color: #F3603B;
+}
+#slider2:checked ~ .persona2{
+   display: block;
+}*/
+
 .seccion4{
     height: 500px;
     background-color: var(--color-botones);
@@ -275,4 +309,66 @@ footer form{
     padding: 50px 0;
 }
 
+@media(max-width:767px){
+    #icon-hambur:hover{
+        cursor: pointer;
+    }
+    #menu:checked  ~ ul{
+        display: block;
+    }
+    
+    #menu{
+        display: none;
+    }
+    
+    nav ul{
+        background-color: var(--color-p-footer);
+        height: 800px;
+        width: 700px;
+        position: fixed;
+        z-index: 100;
+        top: 60px;
+        left: 20px;
+    }
+    
+    nav li{
+        font-size: 30px;
+        margin: 90px 0 0 70px;
+    }
+    
+    nav a{
+        color: var(--color-nav);
+    }
+    
+    nav a:hover{
+        color: var(--color-botones);
+    }
 
+    .boton-1{
+        display: none;
+    }
+}
+
+@media (min-width:768px){
+    nav ul{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    nav a{
+        color: var(--color-nav);
+        font-weight: bold;
+    }
+
+    nav a:hover{
+        color: var(--color-parrafos);
+    }
+    
+   #menu{
+       display: none;
+   }
+
+   #icon-hambur{
+       display: none;
+   }
+}
