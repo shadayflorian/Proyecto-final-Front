@@ -21,6 +21,7 @@ h1, h2, h3{
 
 a{
     text-decoration: none;
+    color: white;
 }
 
 p{
@@ -46,26 +47,22 @@ button:hover{
     box-shadow: 0 4px 2px 2.8px rgba(243,96,59, 0.25);
 }
 
-/*header*/
-/*fondo*/
+/*fondo version mobille*/
 .contenedor1{
     background-image: url(sources/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -60px;
-    background-position-x: 50px;
+    background-size: 500px;
+    background-position-y: -100px;
+    background-position-x: 60px;
 }
+
+/*header*/
 header{
    padding-top: 40px;
     display: flex;
     justify-content: space-around;
 }
 
-/*
-nav ul{
-    display: none;
-}
-*/
 nav ul{
     display: none;
 }
@@ -73,7 +70,6 @@ nav ul{
 .logo{
     height: 20px;
 }
-
 
 /*otras secciones*/
 .seccion1 img{
@@ -87,18 +83,13 @@ nav ul{
     height: 150px;
 }
 
-.bloque1 img{
-    height: 140px;
-}
-.imagen1{
-    margin-right: 20px;
-}
-.imagen3{
-    margin: 0;
+.fondo-imagenes{
     display: flex;
-    align-items: center;
-    position: relative;
-    left: 100px;
+    justify-content: center;
+}
+.seccion1 img{
+    height: 300px;
+    width: 300px;
 }
 
 .seccion2 h1{
@@ -108,14 +99,6 @@ nav ul{
    padding: 0 10px;
 }
 
-.seccion2{
-    background-image: url(sources/bg-tablet-pattern.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    background-position-x: 245px;
-    background-position-y: -5px;
-}
 .seccion2 p{
     margin: 0 30px 0 50px;
     font-size: 18px;
@@ -147,11 +130,11 @@ nav ul{
 .seccion-diferencias{
     display: flex;
     margin-top: 30px;
+    box-sizing: border-box;
 }
 
 .seccion-diferencias h3{
     font-size: 16px;
-    background-color: rgba(248,143,119, 0.2);
     height: 35px;
     width: 900px;
     padding: 12px 0 0 20px;
@@ -168,6 +151,7 @@ nav ul{
 
 .diferencias p{
     text-align: left;
+    box-sizing: border-box;
     margin: 10px 5px 0 15px;
 }
 
@@ -247,8 +231,14 @@ nav ul{
     margin-top: 10px;
 }
 .seccion4 button{
-    color: var(--color-botones);
     background-color: var(--color-p-footer);
+}
+
+.seccion4 button:hover{
+    background-color: rgba(248, 182, 166, 0.9);
+}
+.seccion4 button a{
+    color: var(--color-botones);
 }
 
 /*footer*/
@@ -264,6 +254,10 @@ footer{
   margin-top: 80px;
 }
 
+.lista-footer a:hover{
+    color: var(--color-botones);
+}
+
 footer form{
     display: flex;
     justify-content: space-around;
@@ -277,6 +271,9 @@ footer form{
 #email{
     height: 50px;
     width: 270px;
+}
+
+#email::placeholder{
     padding: 5px 0 0 20px;
     color: var(--color-parrafos);
 }
@@ -309,7 +306,7 @@ footer form{
     padding: 50px 0;
 }
 
-@media(max-width:767px){
+@media(max-width:1099px){ /*min width 460 0 500*/
     #icon-hambur:hover{
         cursor: pointer;
     }
@@ -347,9 +344,26 @@ footer form{
     .boton-1{
         display: none;
     }
+
+    .seccion2{
+        background-image: url(sources/bg-tablet-pattern.svg);
+        background-repeat: no-repeat;
+        background-size: 300px;
+        height: 400px;
+        background-position-x: 240px;
+        background-position-y: 100px;
+    }
+
+    .seccion-diferencias h3{
+        background-color: rgba(248,143,119, 0.2);
+    }
 }
 
-@media (min-width:768px){
+@media (min-width:1100px){
+    .logo{
+        position: relative;
+        top: 20px;
+    }
     nav ul{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -359,11 +373,19 @@ footer form{
         color: var(--color-nav);
         font-weight: bold;
     }
-
+    
     nav a:hover{
         color: var(--color-parrafos);
     }
+
+    .atributo-menu{
+     margin-right: 20px;
+    }
     
+    .boton-1{
+        position: relative;
+        bottom: 30px;
+    }
    #menu{
        display: none;
    }
@@ -371,4 +393,156 @@ footer form{
    #icon-hambur{
        display: none;
    }
+
+   /*fondo principal*/
+   .contenedor1{
+    background-size: 600px;
+    background-position-y: -170px;
+    background-position-x: 890px;
+}
+   .fondo-principal{
+       display: flex;
+       flex-direction: row-reverse;
+       justify-content: space-around;
+   }
+
+   .seccion1 img{
+       height: 400px;
+       width: 500px;
+   }
+
+   .seccion2{
+      width: 500px;
+      margin-top: 60px;
+   }
+
+   .seccion2 h1{
+       text-align: left;
+       font-size: 55px;
+   }
+
+   .seccion2 p{
+       text-align: left;
+       margin-left: 15px;
+   }
+
+   .seccion2 .boton{
+    justify-content: left;
+    margin-left: 15px;
+   }
+
+   .seccion3{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 150px;
+   }
+
+   .diferencias{
+       width: 450px;
+       margin-left: 100px;
+   }
+
+   .diferencias h2{
+       text-align: left;
+   }
+
+   .diferencias-section{
+       margin-top: 40px;
+   }
+
+   .seccion-diferencias button{
+       width: 145px;
+       height: 35px;
+       position: relative;
+       right: 100px;
+   }
+
+   .seccion-diferencias h3{
+       position: relative;
+       right: 90px;
+   }
+
+   .fondo2{
+       background-image: url(sources/bg-tablet-pattern.svg);
+       background-repeat: no-repeat;
+       background-size: 700px;
+       background-position-y: 300px;
+       background-position-x: -350px;
+   }
+
+   .opiniones{
+       margin-bottom: 100px;
+   }
+
+   .seccion-opiniones{
+       display: flex;
+   }
+
+   .persona{
+       display: block;
+   }
+
+   .puntos-slider{
+       display: none;
+   }
+
+   .boton2{
+     position: relative;
+     bottom: 50px;
+   }
+
+   /*seccion4*/
+   .seccion4{
+       height: 224px;
+       display: flex;
+       justify-content: space-around;
+   }
+
+   .seccion4 p{
+       text-align: left;
+       font-size: 40px;
+       width: 450px;
+       padding: 0;
+   }
+
+   .seccion4 .boton{
+       display: flex;
+       align-items: center;
+   }
+
+   footer{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+   }
+
+   .logo-footer{
+       width: 40px;
+       height: 20px;
+       margin: 35px 0 0 60px;
+   }
+
+ .redes-sociales{
+     position: absolute;
+     left: 100px;
+     margin-top: 200px;
+ }
+
+ .redes-sociales a{
+     margin-left: 10px;
+ }
+
+ .redes-sociales img{
+     height: 22px;
+ }
+
+ footer p{
+     display: none;
+ }
+
+ footer #button{
+     height: 40px;
+     width: 60px;
+     margin-top: 5px;
+ }
 }
