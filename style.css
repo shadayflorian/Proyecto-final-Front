@@ -203,12 +203,6 @@ nav ul{
     margin-left: 30px;
     border: var(--color-parrafos) solid 2px;
 }
-/*#slider{
-    background-color: #F3603B;
-}
-#slider2:checked ~ .persona2{
-   display: block;
-}*/
 
 /*seccion 4, antes del footer*/
 .seccion4{
@@ -311,7 +305,9 @@ footer form{
 }
 
 /*media queries*/
-@media(max-width:500px){ /*min width 460 0 500*/
+/*detalles pantalla celular*/
+@media(max-width:500px){ 
+    /*menu*/
     #icon-hambur:hover{
         cursor: pointer;
     }
@@ -349,7 +345,8 @@ footer form{
     .boton-1{
         display: none;
     }
-
+    
+    /*seccion2*/
     .seccion2{
         background-image: url(sources/bg-tablet-pattern.svg);
         background-repeat: no-repeat;
@@ -358,11 +355,12 @@ footer form{
         background-position-x: 240px;
         background-position-y: 100px;
     }
-
+    /*Seccion diferencias*/
     .seccion-diferencias h3{
         background-color: rgba(248,143,119, 0.2);
     }
-
+    
+    /*footer*/
     footer p{
         margin: 0;
         text-align: center;
@@ -371,7 +369,9 @@ footer form{
 
 }
 
+/*pantalla tablet*/
 @media(min-width:500px)and (max-width:1100px){
+    /*header*/
     .logo{
         position: relative;
         top: 20px;
@@ -380,7 +380,7 @@ footer form{
     .boton-1{
         display: none;
     }
-    
+    /*menu*/
     nav ul{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -406,7 +406,7 @@ footer form{
     #icon-hambur{
         display: none;
     }
-
+    /*fondo-principal*/
     .fondo-principal{
         display: flex;
         flex-direction: row-reverse;
@@ -416,6 +416,18 @@ footer form{
     .seccion2{
         width: 400px;
         margin-top: 60px;
+    }
+    
+    /*seccion diferencias*/
+    .seccion-diferencias h3{
+        background-color: rgba(241, 176, 161, 0.2);
+    }
+
+    .diferencias button{
+        width: 80px;
+        height: 40px;
+        position: relative;
+        top: 20px;
     }
 
     .seccion3{
@@ -452,10 +464,15 @@ footer form{
         margin-right: 50px;
     }
 
+    .lista-footer{
+        margin-left: 130px;
+    }
+
 }
 
-
+/*pantalla laptop*/
 @media (min-width:1100px){
+    /*header*/
     .logo{
         position: relative;
         top: 20px;
@@ -545,6 +562,7 @@ footer form{
        text-align: left;
    }
 
+
    .diferencias-section{
        margin-top: 40px;
    }
@@ -619,7 +637,7 @@ footer form{
        display: flex;
        align-items: center;
    }
-
+   /*footer*/
    footer{
       display: flex;
       flex-direction: row-reverse;
@@ -633,11 +651,11 @@ footer form{
        margin: 35px 0 0 80px;
    }
 
- .redes-sociales{
+   .redes-sociales{
      position: absolute;
      left: 100px;
      margin-top: 180px;
- }
+   }
 
  .redes-sociales a{
      margin-left: 10px;
