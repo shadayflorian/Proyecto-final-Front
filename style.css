@@ -28,6 +28,7 @@ p{
     color: var(--color-parrafos);
     line-height: 30px;
 }
+
 ul li{
     list-style: none;
 }
@@ -71,27 +72,19 @@ nav ul{
     height: 20px;
 }
 
-/*otras secciones*/
+/*graficos del fondo principal*/
 .seccion1 img{
-   margin-top: 80px;
-   height: 160px;
-   width: 160px;
-}
-.bloque1{
-    display: flex;
-    justify-content: center;
-    height: 150px;
-}
-
-.fondo-imagenes{
-    display: flex;
-    justify-content: center;
-}
-.seccion1 img{
+    margin-top: 80px;
     height: 300px;
     width: 300px;
 }
 
+.seccion1{
+    display: flex;
+    justify-content: center;
+}
+
+/*escrito del fondo principal*/
 .seccion2 h1{
    text-align: center;
    font-size: 40px;
@@ -104,12 +97,14 @@ nav ul{
     font-size: 18px;
 }
 
+/*boton del fondo principal*/
 .boton{
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
+/*seccion diferencias*/
 .seccion3{
     position: relative;
     bottom: 70px;
@@ -127,6 +122,7 @@ nav ul{
     text-align: center;
 }
 
+/*seccion diferencias, items*/
 .seccion-diferencias{
     display: flex;
     margin-top: 30px;
@@ -189,10 +185,12 @@ nav ul{
     margin: 0 30px;
 }
 
+/*testimonio de personas version mobile*/
 .persona{
     display: none;
 }
 
+/*slider seccion opiniones*/
 .puntos-slider{
     display: flex;
     justify-content: center;
@@ -212,6 +210,7 @@ nav ul{
    display: block;
 }*/
 
+/*seccion 4, antes del footer*/
 .seccion4{
     height: 500px;
     background-color: var(--color-botones);
@@ -225,6 +224,8 @@ nav ul{
     height: 200px;
     line-height: 70px;
     font-weight: bold;
+    position: relative;
+    z-index: 1;
 }
 
 .seccion4 .boton{
@@ -258,6 +259,7 @@ footer{
     color: var(--color-botones);
 }
 
+/*formulario footer*/
 footer form{
     display: flex;
     justify-content: space-around;
@@ -290,23 +292,26 @@ footer form{
     color: var(--color-p-footer); 
 }
 
+/*redes sociales footer*/
 .redes-sociales{
     display: flex;
     justify-content: space-around;
     margin-top: 60px;
 }
 
-.redes-sociales img{
-    height: 35px;
+.iconos:hover{
+    stroke: var(--color-botones);
 }
 
+/*logo footer*/
 .logo-footer{
     display: flex;
     justify-content: center;
     padding: 50px 0;
 }
 
-@media(max-width:1099px){ /*min width 460 0 500*/
+/*media queries*/
+@media(max-width:500px){ /*min width 460 0 500*/
     #icon-hambur:hover{
         cursor: pointer;
     }
@@ -357,13 +362,105 @@ footer form{
     .seccion-diferencias h3{
         background-color: rgba(248,143,119, 0.2);
     }
+
+    footer p{
+        margin: 0;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
 }
+
+@media(min-width:500px)and (max-width:1100px){
+    .logo{
+        position: relative;
+        top: 20px;
+    }
+
+    .boton-1{
+        display: none;
+    }
+    
+    nav ul{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    nav a{
+        color: var(--color-nav);
+        font-weight: bold;
+    }
+    
+    nav a:hover{
+        color: var(--color-parrafos);
+    }
+
+    .atributo-menu{
+     margin-right: 20px;
+    }
+
+    #menu{
+        display: none;
+    }
+ 
+    #icon-hambur{
+        display: none;
+    }
+
+    .fondo-principal{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .seccion2{
+        width: 400px;
+        margin-top: 60px;
+    }
+
+    .seccion3{
+        margin: 0 40px;
+    }
+
+    .seccion3 h2{
+        font-size: 35px;
+        text-align: center;
+        margin-top: 150px;
+        padding: 0 20px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    .seccion4{
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .seccion4 p{
+        margin-right: 40px;
+        position: relative;
+        bottom: 90px;
+    }
+
+    .seccion4 button{
+        position: relative;
+        top: 80px;
+        margin-right: 50px;
+    }
+
+}
+
 
 @media (min-width:1100px){
     .logo{
         position: relative;
         top: 20px;
     }
+    
     nav ul{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -386,6 +483,7 @@ footer form{
         position: relative;
         bottom: 30px;
     }
+
    #menu{
        display: none;
    }
@@ -399,7 +497,8 @@ footer form{
     background-size: 600px;
     background-position-y: -170px;
     background-position-x: 890px;
-}
+   }
+
    .fondo-principal{
        display: flex;
        flex-direction: row-reverse;
@@ -505,6 +604,17 @@ footer form{
        padding: 0;
    }
 
+   .seccion4 p::after{
+    content: url(sources/bg-tablet-pattern.svg);
+    position: absolute;
+    left: -50px;
+    bottom: -240px;
+    z-index: -1;
+    transform: scale(0.4);
+    opacity: 0.1;
+    
+    }
+
    .seccion4 .boton{
        display: flex;
        align-items: center;
@@ -514,35 +624,39 @@ footer form{
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-around;
+      height: 300px;
    }
 
    .logo-footer{
        width: 40px;
        height: 20px;
-       margin: 35px 0 0 60px;
+       margin: 35px 0 0 80px;
    }
 
  .redes-sociales{
      position: absolute;
      left: 100px;
-     margin-top: 200px;
+     margin-top: 180px;
  }
 
  .redes-sociales a{
      margin-left: 10px;
+     margin-top: 15px;
  }
 
- .redes-sociales img{
-     height: 22px;
- }
-
- footer p{
-     display: none;
+ .lista-footer{
+     margin-left: 80px;
  }
 
  footer #button{
      height: 40px;
      width: 60px;
      margin-top: 5px;
+ }
+
+ footer p{
+    position: absolute;
+    left: 940px;
+    margin-top: 190px;
  }
 }
