@@ -190,20 +190,6 @@ nav ul{
     display: none;
 }
 
-/*slider seccion opiniones*/
-.puntos-slider{
-    display: flex;
-    justify-content: center;
-}
-.slider{
-    background-color: var(--color-botones);
-    height: 10px;
-    width: 10px;
-    border-radius: 100px;
-    margin-left: 30px;
-    border: var(--color-parrafos) solid 2px;
-}
-
 /*seccion 4, antes del footer*/
 .seccion4{
     height: 500px;
@@ -280,6 +266,7 @@ footer form{
     margin-left: 10px;
     background-color: var(--color-botones);
     color: white;
+    font-weight: bold;
 }
 
 .lista-footer{
@@ -305,7 +292,9 @@ footer form{
 }
 
 /*media queries*/
-/*detalles pantalla celular*/
+/*especificaciones de detalles de mobile*/
+/*PROFE YO HICE 3 TIPOS DE PANTALLA PERO 
+PREFIRIRIA QUE ME CALIFIQUE LA PANTALLA MOBILE PARA IPHONEX Y LA DE DESKTOP, GRACIAS! */
 @media(max-width:500px){ 
     /*menu*/
     #icon-hambur:hover{
@@ -370,7 +359,7 @@ footer form{
 }
 
 /*pantalla tablet*/
-@media(min-width:500px)and (max-width:1100px){
+@media(min-width:501px)and (max-width:1200px){
     /*header*/
     .logo{
         position: relative;
@@ -471,7 +460,7 @@ footer form{
 }
 
 /*pantalla laptop*/
-@media (min-width:1100px){
+@media (min-width:1200px){
     /*header*/
     .logo{
         position: relative;
@@ -610,6 +599,9 @@ footer form{
 
    /*seccion4*/
    .seccion4{
+       background-image: url(sources/bg-simplify-section-mobile.svg);
+       background-repeat: no-repeat;
+       background-size: cover;
        height: 224px;
        display: flex;
        justify-content: space-around;
@@ -621,17 +613,6 @@ footer form{
        width: 450px;
        padding: 0;
    }
-
-   .seccion4 p::after{
-    content: url(sources/bg-tablet-pattern.svg);
-    position: absolute;
-    left: -50px;
-    bottom: -240px;
-    z-index: -1;
-    transform: scale(0.4);
-    opacity: 0.1;
-    
-    }
 
    .seccion4 .boton{
        display: flex;
